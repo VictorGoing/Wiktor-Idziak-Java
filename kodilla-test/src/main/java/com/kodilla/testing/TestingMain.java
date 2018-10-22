@@ -29,8 +29,7 @@ public class TestingMain {
         }else{
             System.out.println("add Error");
         }
-
-
+        
         int resultsub=calculator.subtract(5,4);
 
         if(resultsub==5-4){
