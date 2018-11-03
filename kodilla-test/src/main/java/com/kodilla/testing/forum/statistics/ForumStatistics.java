@@ -34,16 +34,12 @@ public class ForumStatistics {
     public int getPostsQuantity(){
         return postsQuantity;
     }
-    public int getCommentsQuantity(){
-        return commentsQuantity;
+    public int getCommentsQuantity(){ return commentsQuantity; }
+    public double getPostsPerUser(){ return postsPerUser; }
+    public double getCommentsPerUser(){
+        return commentsPerUser;
     }
-    public int getPostsPerUser(){
-        return (int) postsPerUser;
-    }
-    public int getCommentsPerUser(){
-        return (int) commentsPerUser;
-    }
-    public int getCommentsPerPost(){
-        return (int) commmentsPerPost;
+    public double getCommentsPerPost(){
+        return commmentsPerPost;
     }
 }
