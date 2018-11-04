@@ -134,6 +134,6 @@ public class BookDirectoryTestSuite {
         List<Book> result = libraryDatabaseMock.listBooksInHandsOf(libraryUserMock);
 
 
-        Assert.assertEquals(5,result.size());
+        Assert.assertEquals(5 ,result.size());
     }
 }
