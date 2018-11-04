@@ -9,7 +9,7 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 public class ForumStaticsTestSuite {
-    
+
     @Test
     public void testPosts0(){
         Statistics statisticsMock = mock(Statistics.class);
