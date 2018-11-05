@@ -97,7 +97,7 @@ public class BookDirectoryTestSuite {
 
 
 
-       List<Book> result = libraryDatabaseMock.listBooksInHandsOf(libraryUserMock);
+       List<Book> result = bookLibrary.listBooksInHandsOf(libraryUserMock);
 
 
         Assert.assertEquals(0,result.size());
@@ -112,7 +112,7 @@ public class BookDirectoryTestSuite {
         helpdesk.add(mock(Book.class));
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUserMock)).thenReturn(helpdesk);
 
-        List<Book> result = libraryDatabaseMock.listBooksInHandsOf(libraryUserMock);
+        List<Book> result = bookLibrary.listBooksInHandsOf(libraryUserMock);
 
 
         Assert.assertEquals(1,result.size());
@@ -131,7 +131,7 @@ public class BookDirectoryTestSuite {
         helpdesk.add(mock(Book.class));
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUserMock)).thenReturn(helpdesk);
 
-        List<Book> result = libraryDatabaseMock.listBooksInHandsOf(libraryUserMock);
+        List<Book> result = bookLibrary.listBooksInHandsOf(libraryUserMock);
 
 
         Assert.assertEquals(5 ,result.size());

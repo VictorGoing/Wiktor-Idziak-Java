@@ -23,6 +23,7 @@ public class BookLibrary {
 
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser){
         List<Book> listbook = new ArrayList<Book>();
+
         return listbook;
     }
 
