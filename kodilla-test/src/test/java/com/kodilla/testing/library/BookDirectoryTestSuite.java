@@ -93,7 +93,7 @@ public class BookDirectoryTestSuite {
     public void testListBooksInHandsOf0(){
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        LibraryUser libraryUserMock = mock(LibraryUser.class);
+        LibraryUser libraryUserMock = new LibraryUser("firstname","lastname","01234567891");
 
 
 
@@ -107,9 +107,9 @@ public class BookDirectoryTestSuite {
     public void testListBooksInHandsOf1(){
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        LibraryUser libraryUserMock = mock(LibraryUser.class);
+        LibraryUser libraryUserMock = new LibraryUser("firstname","lastname","01234567891");
         List<Book> helpdesk = new ArrayList<Book>();
-        helpdesk.add(mock(Book.class));
+        helpdesk.add(new Book("title","author",1997));
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUserMock)).thenReturn(helpdesk);
 
         List<Book> result = bookLibrary.listBooksInHandsOf(libraryUserMock);
@@ -122,13 +122,13 @@ public class BookDirectoryTestSuite {
     public void testListBooksInHandsOf5(){
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        LibraryUser libraryUserMock = mock(LibraryUser.class);
+        LibraryUser libraryUserMock = new LibraryUser("firstname","lastname","01234567891");
         List<Book> helpdesk = new ArrayList<Book>();
-        helpdesk.add(mock(Book.class));
-        helpdesk.add(mock(Book.class));
-        helpdesk.add(mock(Book.class));
-        helpdesk.add(mock(Book.class));
-        helpdesk.add(mock(Book.class));
+        helpdesk.add(new Book("title","author",1997));
+        helpdesk.add(new Book("title","author",1997));
+        helpdesk.add(new Book("title","author",1997));
+        helpdesk.add(new Book("title","author",1997));
+        helpdesk.add(new Book("title","author",1997));
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUserMock)).thenReturn(helpdesk);
 
         List<Book> result = bookLibrary.listBooksInHandsOf(libraryUserMock);
