@@ -9,15 +9,18 @@ public class ForumStatistics {
     private double postsPerUser;
     private double commentsPerUser;
     private double commmentsPerPost;
-    Statistics statistics;
+
 
     public void calculateAdvStatistics(Statistics statistics){
         usersQuantity = statistics.usersNames().size();
         postsQuantity = statistics.postsCount();
         commentsQuantity = statistics.commentsCount();
-        postsPerUser = (double)postsQuantity/usersQuantity;
-        commentsPerUser = (double)commentsQuantity/usersQuantity;
-        commmentsPerPost = (double)commentsQuantity/postsQuantity;
+        if(usersQuantity!=0) {
+            postsPerUser = (double) postsQuantity / usersQuantity;
+            commentsPerUser = (double)commentsQuantity/usersQuantity;
+        }
+        if(postsQuantity!=0)
+            commmentsPerPost = (double)commentsQuantity/postsQuantity;
     }
 
     public void showStatistics(){
