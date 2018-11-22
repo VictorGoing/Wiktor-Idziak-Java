@@ -48,7 +48,7 @@ public class WorldTestSuite {
 
         BigDecimal totalPeopleQuantity = earth.getPeopleQuantity();
 
-        Assert.assertEquals(totalPeopleQuantity,new BigDecimal("1200"));
+        Assert.assertEquals(new BigDecimal("1200"),totalPeopleQuantity);
 
 
     }
