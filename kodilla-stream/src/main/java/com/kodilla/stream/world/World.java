@@ -22,4 +22,13 @@ public class World {
                .reduce(BigDecimal.ZERO,(sum,current) -> sum = sum.add(current));
        return quantity;
     }
+    public BigDecimal getPeopleQunatityFor(){
+       BigDecimal quntity= new BigDecimal("0");
+       for(Continent continent: world ){
+           for(Country country: continent.getContinent()){
+               quntity =  quntity.add(country.getPeopleQuantity());
+           }
+       }
+        return quntity;
+    }
 }
